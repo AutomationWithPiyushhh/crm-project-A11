@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,6 +30,15 @@ public class CreateOrgTest {
 		String USERNAME = pObj.getProperty("un");
 		String PASSWORD = pObj.getProperty("pwd");
 
+		FileInputStream fis2 = new FileInputStream("C:\\Users\\User\\git\\A11-crm-framework\\vtiger-crm-framework-A11\\src\\test\\resources\\testScrptData.xlsx");
+		
+		Workbook wb = WorkbookFactory.create(fis2);
+		
+		Sheet sh = wb.getSheet("Org");
+
+		String orgName = sh.getRow(8).getCell(0).getStringCellValue() + (int) (Math.random() * 9999);
+		System.out.println(orgName);
+		
 		WebDriver driver = null;
 
 		if (BROWSER.equals("chrome")) {
@@ -57,7 +69,7 @@ public class CreateOrgTest {
 		driver.findElement(By.linkText("Organizations")).click();
 		driver.findElement(By.cssSelector("img[title='Create Organization...']")).click();
 
-		String orgName = "qspiders_" + (int) (Math.random() * 9999);
+//		String orgName = "qspiders_" + (int) (Math.random() * 9999);
 		WebElement orgField = driver.findElement(By.name("accountname"));
 		orgField.sendKeys(orgName);
 
