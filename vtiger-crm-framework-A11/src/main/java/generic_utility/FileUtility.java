@@ -37,9 +37,6 @@ public class FileUtility {
 		return value;
 	}
 
-	
-	
-	
 	public int getNumericDataFromExcelFile(String sheetName, int rowNum, int cellNum)
 			throws EncryptedDocumentException, IOException {
 
@@ -57,7 +54,7 @@ public class FileUtility {
 
 	public static void main(String[] args) throws EncryptedDocumentException, IOException {
 		FileUtility fUtil = new FileUtility();
-		int value1 = fUtil.getNumericDataFromExcelFile("Org", 1, 1); 
+		int value1 = fUtil.getNumericDataFromExcelFile("Org", 1, 1);
 		System.out.println(value1);
 	}
 }
