@@ -16,29 +16,21 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import generic_utility.FileUtility;
+
 public class CreateOrgTest {
 	public static void main(String[] args) throws InterruptedException, IOException {
 
-		FileInputStream fis = new FileInputStream(
-				"C:\\Users\\User\\git\\A11-crm-framework\\vtiger-crm-framework-A11\\src\\test\\resources\\commondata.properties");
+		FileUtility fUtil = new FileUtility();
 
-		Properties pObj = new Properties();
-		pObj.load(fis);
+		String BROWSER = fUtil.getDataFromPropertiesFile("bro");
+		String URL = fUtil.getDataFromPropertiesFile("url");
+		String USERNAME = fUtil.getDataFromPropertiesFile("un");
+		String PASSWORD = fUtil.getDataFromPropertiesFile("pwd");
 
-		String BROWSER = pObj.getProperty("bro");
-		String URL = pObj.getProperty("url");
-		String USERNAME = pObj.getProperty("un");
-		String PASSWORD = pObj.getProperty("pwd");
-
-		FileInputStream fis2 = new FileInputStream("C:\\Users\\User\\git\\A11-crm-framework\\vtiger-crm-framework-A11\\src\\test\\resources\\testScrptData.xlsx");
-		
-		Workbook wb = WorkbookFactory.create(fis2);
-		
-		Sheet sh = wb.getSheet("Org");
-
-		String orgName = sh.getRow(8).getCell(0).getStringCellValue() + (int) (Math.random() * 9999);
+		String orgName = fUtil.getStringDataFromExcelFile("Org", 1, 0) + (int)(Math.random()*9999);
 		System.out.println(orgName);
-		
+
 		WebDriver driver = null;
 
 		if (BROWSER.equals("chrome")) {
