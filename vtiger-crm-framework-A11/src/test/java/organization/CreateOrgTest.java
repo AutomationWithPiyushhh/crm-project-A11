@@ -1,23 +1,17 @@
 package organization;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Properties;
 
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 
 import generic_utility.FileUtility;
-import generic_utility.WebdriverUtility;
+import generic_utility.WebDriverUtility;
 
 public class CreateOrgTest {
 	public static void main(String[] args) throws InterruptedException, IOException {
@@ -80,7 +74,7 @@ public class CreateOrgTest {
 //		Logout
 		WebElement profile = driver.findElement(By.cssSelector("img[src='themes/softed/images/user.PNG']"));
 		
-		WebdriverUtility wdUtil = new WebdriverUtility(driver);
+		WebDriverUtility wdUtil = new WebDriverUtility(driver);
 
 		wdUtil.hover(profile);
 		
