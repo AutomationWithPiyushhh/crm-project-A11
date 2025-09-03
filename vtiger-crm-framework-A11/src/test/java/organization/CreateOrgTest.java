@@ -17,6 +17,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import generic_utility.FileUtility;
+import generic_utility.WebdriverUtility;
 
 public class CreateOrgTest {
 	public static void main(String[] args) throws InterruptedException, IOException {
@@ -78,10 +79,11 @@ public class CreateOrgTest {
 
 //		Logout
 		WebElement profile = driver.findElement(By.cssSelector("img[src='themes/softed/images/user.PNG']"));
+		
+		WebdriverUtility wdUtil = new WebdriverUtility(driver);
 
-		Actions act = new Actions(driver);
-		act.moveToElement(profile).build().perform();
-
+		wdUtil.hover(profile);
+		
 		driver.findElement(By.linkText("Sign Out")).click();
 
 		Thread.sleep(3000);
