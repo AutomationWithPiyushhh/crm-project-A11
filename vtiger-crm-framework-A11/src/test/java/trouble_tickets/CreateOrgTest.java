@@ -1,4 +1,4 @@
-package organization;
+package trouble_tickets;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -12,8 +12,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import generic_utility.FileUtility;
 import generic_utility.WebDriverUtility;
-import object_repository.HomePage;
-import object_repository.LoginPage;
 
 public class CreateOrgTest {
 	public static void main(String[] args) throws InterruptedException, IOException {
@@ -46,29 +44,18 @@ public class CreateOrgTest {
 		driver.get(URL);
 
 //		Login
-//		WebElement username = driver.findElement(By.name("user_name"));
-//		WebElement password = driver.findElement(By.name("user_password"));
-//		WebElement loginBtn = driver.findElement(By.id("submitButton"));
-		
-		LoginPage lp = new LoginPage(driver);
-		
-		WebElement username = lp.getUn();
-		WebElement password = lp.getPwd();
-		WebElement loginBtn = lp.getLogIn();
-		
+		WebElement username = driver.findElement(By.name("user_name"));
+		WebElement password = driver.findElement(By.name("user_password"));
+
 		driver.navigate().refresh();
 		
 		username.sendKeys(USERNAME);
 		password.sendKeys(PASSWORD);
-		loginBtn.click();
+
+		driver.findElement(By.id("submitButton")).click();
 
 //		Create Organization
-//		driver.findElement(By.linkText("Organizations")).click();
-		
-		HomePage hp = new HomePage(driver);
-		hp.getOrgLink().click();
-		
-		
+		driver.findElement(By.linkText("Organizations")).click();
 		driver.findElement(By.cssSelector("img[title='Create Organization...']")).click();
 
 //		String orgName = "qspiders_" + (int) (Math.random() * 9999);

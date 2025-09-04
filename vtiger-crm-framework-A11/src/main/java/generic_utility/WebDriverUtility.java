@@ -56,6 +56,28 @@ public class WebDriverUtility {
 		driver.manage().window().maximize();
 	}
 
+	
+	public void frame(int index) {
+		driver.switchTo().frame(index);
+	}
+	
+	public void frame(String idOrName) {
+		driver.switchTo().frame(idOrName);
+	}
+	
+	public void frame(WebElement element) {
+		driver.switchTo().frame(element);
+	}
+	
+	public void parentFrame() {
+		driver.switchTo().parentFrame();
+	}
+	
+	public void mainFrame() {
+		driver.switchTo().defaultContent();
+	}
+	
+
 	/**
 	 * Makes the browser fullscreen.
 	 */
