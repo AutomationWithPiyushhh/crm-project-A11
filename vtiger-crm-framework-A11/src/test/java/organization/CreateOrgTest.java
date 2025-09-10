@@ -9,14 +9,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 import generic_utility.FileUtility;
 import generic_utility.WebDriverUtility;
 import object_repository.HomePage;
 import object_repository.LoginPage;
+import object_repository.OrgPage;
 
 public class CreateOrgTest {
-	public static void main(String[] args) throws InterruptedException, IOException {
+	@Test
+	public void createOrgTest() throws IOException, InterruptedException {
 
 		FileUtility fUtil = new FileUtility();
 
@@ -25,7 +28,7 @@ public class CreateOrgTest {
 		String USERNAME = fUtil.getDataFromPropertiesFile("un");
 		String PASSWORD = fUtil.getDataFromPropertiesFile("pwd");
 
-		String orgName = fUtil.getStringDataFromExcelFile("Org", 1, 0) + (int)(Math.random()*9999);
+		String orgName = fUtil.getStringDataFromExcelFile("Org", 1, 0) + (int) (Math.random() * 9999);
 		System.out.println(orgName);
 
 		WebDriver driver = null;
@@ -46,38 +49,19 @@ public class CreateOrgTest {
 		driver.get(URL);
 
 //		Login
-//		WebElement username = driver.findElement(By.name("user_name"));
-//		WebElement password = driver.findElement(By.name("user_password"));
-//		WebElement loginBtn = driver.findElement(By.id("submitButton"));
-		
 		LoginPage lp = new LoginPage(driver);
-		
-		WebElement username = lp.getUn();
-		WebElement password = lp.getPwd();
-		WebElement loginBtn = lp.getLogIn();
-		
-		driver.navigate().refresh();
-		
-		username.sendKeys(USERNAME);
-		password.sendKeys(PASSWORD);
-		loginBtn.click();
 
-//		Create Organization
-//		driver.findElement(By.linkText("Organizations")).click();
-		
+		lp.loginToCRM(USERNAME, PASSWORD);
+
 		HomePage hp = new HomePage(driver);
 		hp.getOrgLink().click();
-		
-		
-		driver.findElement(By.cssSelector("img[title='Create Organization...']")).click();
 
-//		String orgName = "qspiders_" + (int) (Math.random() * 9999);
-		WebElement orgField = driver.findElement(By.name("accountname"));
+		OrgPage op = new OrgPage(driver);
+		op.getPlusIcon().click();
+		WebElement orgField = op.getOrgNameField();
 		orgField.sendKeys(orgName);
 
-		driver.findElement(By.xpath("//input[@value='  Save  ']")).click();
-
-//		Verification
+		op.getSaveBtn().click();
 
 		String actOrgName = driver.findElement(By.id("dtlview_Organization Name")).getText();
 		if (actOrgName.equals(orgName)) {
@@ -87,13 +71,11 @@ public class CreateOrgTest {
 		}
 
 //		Logout
-		WebElement profile = driver.findElement(By.cssSelector("img[src='themes/softed/images/user.PNG']"));
-		
+		WebElement profile = hp.getProfile();
 		WebDriverUtility wdUtil = new WebDriverUtility(driver);
 
 		wdUtil.hover(profile);
-		
-		driver.findElement(By.linkText("Sign Out")).click();
+		hp.getSignOut().click();
 
 		Thread.sleep(3000);
 		driver.quit();

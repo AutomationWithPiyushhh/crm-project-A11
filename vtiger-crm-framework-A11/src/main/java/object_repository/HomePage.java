@@ -18,4 +18,17 @@ public class HomePage {
 		return orgLink;
 	}
 
+	@FindBy(css = "img[src='themes/softed/images/user.PNG']")
+	private WebElement profile;
+	
+	public WebElement getProfile() {
+		return profile;
+	}
+	
+	@FindBy(linkText =  "Sign Out")
+	private WebElement signOut;
+	
+	public WebElement getSignOut() {
+		return signOut;
+	}
 }
