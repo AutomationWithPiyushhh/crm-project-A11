@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[Hey there !!! Please go elsewhere....]]>
-    </line>
   </reporter-output>
-  <suite started-at="2025-09-10T17:05:10 IST" name="Default suite" finished-at="2025-09-10T17:05:10 IST" duration-ms="55">
+  <suite started-at="2025-09-11T17:21:15 IST" name="Default suite" finished-at="2025-09-11T17:21:32 IST" duration-ms="16777">
     <groups>
     </groups>
-    <test started-at="2025-09-10T17:05:10 IST" name="Default test" finished-at="2025-09-10T17:05:10 IST" duration-ms="55">
-      <class name="testngExtra.Demo1">
-        <test-method signature="case1()[pri:0, instance:testngExtra.Demo1@3754a4bf]" started-at="2025-09-10T17:05:10 IST" name="case1" finished-at="2025-09-10T17:05:10 IST" duration-ms="12" status="PASS">
+    <test started-at="2025-09-11T17:21:15 IST" name="Default test" finished-at="2025-09-11T17:21:32 IST" duration-ms="16777">
+      <class name="testngExtra.LoginFB">
+        <test-method signature="logginInToFaceBook()[pri:0, instance:testngExtra.LoginFB@1d296da]" started-at="2025-09-11T17:21:15 IST" name="logginInToFaceBook" finished-at="2025-09-11T17:21:21 IST" duration-ms="6053" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[Hey there !!! Please go elsewhere....]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- case1 -->
-      </class> <!-- testngExtra.Demo1 -->
+        </test-method> <!-- logginInToFaceBook -->
+        <test-method signature="logginInToFaceBook()[pri:0, instance:testngExtra.LoginFB@1d296da]" started-at="2025-09-11T17:21:21 IST" name="logginInToFaceBook" finished-at="2025-09-11T17:21:27 IST" duration-ms="5301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logginInToFaceBook -->
+        <test-method signature="logginInToFaceBook()[pri:0, instance:testngExtra.LoginFB@1d296da]" started-at="2025-09-11T17:21:27 IST" name="logginInToFaceBook" finished-at="2025-09-11T17:21:32 IST" duration-ms="5375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logginInToFaceBook -->
+      </class> <!-- testngExtra.LoginFB -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
