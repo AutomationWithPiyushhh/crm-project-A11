@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="typesOfExecution.Demo2Test">
+      <class name="testngExtra.WorkingWithAssertion">
         <methods>
-          <include name="case2"/>
+          <include name="demoOfHardAssert"/>
         </methods>
-      </class> <!-- typesOfExecution.Demo2Test -->
+      </class> <!-- testngExtra.WorkingWithAssertion -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

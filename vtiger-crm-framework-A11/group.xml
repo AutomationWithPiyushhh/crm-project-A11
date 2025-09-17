@@ -6,7 +6,7 @@
 
 	<groups>
 		<run>
-			<include name="reg"></include>
+			<include name="reg" />
 		</run>
 	</groups>
 

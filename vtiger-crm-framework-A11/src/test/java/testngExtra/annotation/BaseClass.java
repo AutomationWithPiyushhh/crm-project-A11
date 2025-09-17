@@ -1,5 +1,8 @@
 package testngExtra.annotation;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -10,7 +13,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class DemoForConfigAnn {
+public class BaseClass {
 
 	@BeforeSuite
 	public void dbConn() {
@@ -25,11 +28,15 @@ public class DemoForConfigAnn {
 	@BeforeClass
 	public void openBro() {
 		System.out.println("browser open");
+//		WebDriver driver = new ChromeDriver();
 	}
 
 	@BeforeMethod
 	public void login() {
 		System.out.println("login");
+//		driver.findElement(By.id("un")).sendKeys("admin");
+//		driver.findElement(By.id("pwd")).sendKeys("manager");
+//		driver.findElement(By.id("login")).click();
 	}
 
 	@AfterMethod
@@ -53,7 +60,7 @@ public class DemoForConfigAnn {
 	}
 }
 
-class Execution extends DemoForConfigAnn {
+class testScript extends BaseClass {
 	@Test
 	public void orgTest() {
 		System.out.println("Create organization");
