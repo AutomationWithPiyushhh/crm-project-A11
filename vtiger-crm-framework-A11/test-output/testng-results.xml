@@ -1,32 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="6" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-15T17:44:12 IST" name="Suite" finished-at="2025-09-15T17:44:12 IST" duration-ms="59">
+  <suite started-at="2025-09-16T17:56:04 IST" name="Default suite" finished-at="2025-09-16T17:56:04 IST" duration-ms="66">
     <groups>
-      <group name="reg">
-        <method signature="Demo4Test.case5()[pri:0, instance:typesOfExecution.Demo4Test@38425407]" name="case5" class="typesOfExecution.Demo4Test"/>
-        <method signature="Demo4Test.case6()[pri:0, instance:typesOfExecution.Demo4Test@38425407]" name="case6" class="typesOfExecution.Demo4Test"/>
-        <method signature="Demo5Test.case7()[pri:0, instance:typesOfExecution.Demo5Test@206a70ef]" name="case7" class="typesOfExecution.Demo5Test"/>
-      </group> <!-- reg -->
     </groups>
-    <test started-at="2025-09-15T17:44:12 IST" name="Test" finished-at="2025-09-15T17:44:12 IST" duration-ms="59">
-      <class name="typesOfExecution.Demo4Test">
-        <test-method signature="case5()[pri:0, instance:typesOfExecution.Demo4Test@38425407]" started-at="2025-09-15T17:44:12 IST" name="case5" finished-at="2025-09-15T17:44:12 IST" duration-ms="1" status="PASS">
+    <test started-at="2025-09-16T17:56:04 IST" name="Default test" finished-at="2025-09-16T17:56:04 IST" duration-ms="66">
+      <class name="testngExtra.annotation.Execution">
+        <test-method is-config="true" signature="dbConn()[pri:0, instance:testngExtra.annotation.Execution@55fe41ea]" started-at="2025-09-16T17:56:04 IST" name="dbConn" finished-at="2025-09-16T17:56:04 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- case5 -->
-        <test-method signature="case6()[pri:0, instance:typesOfExecution.Demo4Test@38425407]" started-at="2025-09-15T17:44:12 IST" name="case6" finished-at="2025-09-15T17:44:12 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- dbConn -->
+        <test-method is-config="true" signature="preCon()[pri:0, instance:testngExtra.annotation.Execution@55fe41ea]" started-at="2025-09-16T17:56:04 IST" name="preCon" finished-at="2025-09-16T17:56:04 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- case6 -->
-      </class> <!-- typesOfExecution.Demo4Test -->
-      <class name="typesOfExecution.Demo5Test">
-        <test-method signature="case7()[pri:0, instance:typesOfExecution.Demo5Test@206a70ef]" started-at="2025-09-15T17:44:12 IST" name="case7" finished-at="2025-09-15T17:44:12 IST" duration-ms="11" status="PASS">
+        </test-method> <!-- preCon -->
+        <test-method is-config="true" signature="openBro()[pri:0, instance:testngExtra.annotation.Execution@55fe41ea]" started-at="2025-09-16T17:56:04 IST" name="openBro" finished-at="2025-09-16T17:56:04 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- case7 -->
-      </class> <!-- typesOfExecution.Demo5Test -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- openBro -->
+        <test-method is-config="true" signature="login()[pri:0, instance:testngExtra.annotation.Execution@55fe41ea]" started-at="2025-09-16T17:56:04 IST" name="login" finished-at="2025-09-16T17:56:04 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="conTest()[pri:0, instance:testngExtra.annotation.Execution@55fe41ea]" started-at="2025-09-16T17:56:04 IST" name="conTest" finished-at="2025-09-16T17:56:04 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- conTest -->
+        <test-method is-config="true" signature="logOut()[pri:0, instance:testngExtra.annotation.Execution@55fe41ea]" started-at="2025-09-16T17:56:04 IST" name="logOut" finished-at="2025-09-16T17:56:04 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOut -->
+        <test-method is-config="true" signature="login()[pri:0, instance:testngExtra.annotation.Execution@55fe41ea]" started-at="2025-09-16T17:56:04 IST" name="login" finished-at="2025-09-16T17:56:04 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="orgTest()[pri:0, instance:testngExtra.annotation.Execution@55fe41ea]" started-at="2025-09-16T17:56:04 IST" name="orgTest" finished-at="2025-09-16T17:56:04 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orgTest -->
+        <test-method is-config="true" signature="logOut()[pri:0, instance:testngExtra.annotation.Execution@55fe41ea]" started-at="2025-09-16T17:56:04 IST" name="logOut" finished-at="2025-09-16T17:56:04 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOut -->
+        <test-method is-config="true" signature="closeBro()[pri:0, instance:testngExtra.annotation.Execution@55fe41ea]" started-at="2025-09-16T17:56:04 IST" name="closeBro" finished-at="2025-09-16T17:56:04 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBro -->
+        <test-method is-config="true" signature="postCon()[pri:0, instance:testngExtra.annotation.Execution@55fe41ea]" started-at="2025-09-16T17:56:04 IST" name="postCon" finished-at="2025-09-16T17:56:04 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCon -->
+        <test-method is-config="true" signature="dbClose()[pri:0, instance:testngExtra.annotation.Execution@55fe41ea]" started-at="2025-09-16T17:56:04 IST" name="dbClose" finished-at="2025-09-16T17:56:04 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dbClose -->
+      </class> <!-- testngExtra.annotation.Execution -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

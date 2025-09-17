@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testngExtra.DemoForDependency">
+      <class name="typesOfExecution.Demo2Test">
         <methods>
-          <include name="addTocart"/>
-          <include name="search"/>
-          <include name="login"/>
+          <include name="case2"/>
         </methods>
-      </class> <!-- testngExtra.DemoForDependency -->
+      </class> <!-- typesOfExecution.Demo2Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -9,20 +9,26 @@
  -->
 <suite parallel="tests" name="Suite">
 	<test parallel="tests" name="TestRunner1">
+		<parameter name="bro" value="firefox"/>
 		<classes>
 			<class name="typesOfExecution.Demo1Test" />
 		</classes>
 	</test>
 
 	<test parallel="tests" name="TestRunner2">
+		<parameter name="bro" value="edge"/>
 		<classes>
 			<class name="typesOfExecution.Demo2Test" />
 		</classes>
 	</test>
 
 	<test parallel="tests" name="TestRunner3">
+		<parameter name="bro" value="chrome"/>
 		<classes>
 			<class name="typesOfExecution.Demo3Test" />
 		</classes>
 	</test>
+	
+
+	
 </suite>
