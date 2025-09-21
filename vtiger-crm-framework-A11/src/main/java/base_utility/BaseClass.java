@@ -24,10 +24,11 @@ import object_repository.LoginPage;
 
 public class BaseClass {
 	public WebDriver driver = null;
+	public static WebDriver sdriver ;
 
 	@BeforeSuite
 	public void dbConn() {
-		System.out.println("Database connectivity + Report configuration");
+
 	}
 
 	@BeforeTest
@@ -51,6 +52,7 @@ public class BaseClass {
 			driver = new ChromeDriver();
 		}
 
+		sdriver = driver;
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 	}
@@ -92,6 +94,6 @@ public class BaseClass {
 
 	@AfterSuite
 	public void dbClose() {
-		System.out.println("Database connectivity close + Report Backup");
+
 	}
 }

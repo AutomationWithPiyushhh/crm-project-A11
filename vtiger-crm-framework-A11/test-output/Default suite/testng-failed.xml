@@ -3,11 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testngExtra.WorkingWithAssertion">
+      <class name="organization.CreateOrgTest">
         <methods>
-          <include name="demoOfHardAssert"/>
+          <include name="dbConn"/>
+          <include name="openBro"/>
+          <include name="preCon"/>
+          <include name="dbClose"/>
+          <include name="createOrgTest"/>
+          <include name="closeBro"/>
+          <include name="postCon"/>
+          <include name="logOut"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- testngExtra.WorkingWithAssertion -->
+      </class> <!-- organization.CreateOrgTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

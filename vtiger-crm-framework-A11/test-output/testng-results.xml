@@ -1,25 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-18T17:34:34 IST" name="Default suite" finished-at="2025-09-18T17:34:37 IST" duration-ms="2761">
+  <suite started-at="2025-09-19T17:33:51 IST" name="Default suite" finished-at="2025-09-19T17:35:05 IST" duration-ms="73657">
     <groups>
     </groups>
-    <test started-at="2025-09-18T17:34:34 IST" name="Default test" finished-at="2025-09-18T17:34:37 IST" duration-ms="2761">
-      <class name="avance_reports.Facebook">
-        <test-method is-config="true" signature="repConfig()[pri:0, instance:avance_reports.Facebook@fbd1f6]" started-at="2025-09-18T17:34:34 IST" name="repConfig" finished-at="2025-09-18T17:34:34 IST" duration-ms="218" status="PASS">
+    <test started-at="2025-09-19T17:33:51 IST" name="Default test" finished-at="2025-09-19T17:35:05 IST" duration-ms="73657">
+      <class name="organization.CreateOrgTest">
+        <test-method is-config="true" signature="dbConn()[pri:0, instance:organization.CreateOrgTest@fa4c865]" started-at="2025-09-19T17:33:51 IST" name="dbConn" finished-at="2025-09-19T17:33:51 IST" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- repConfig -->
-        <test-method signature="login()[pri:0, instance:avance_reports.Facebook@fbd1f6]" started-at="2025-09-18T17:34:34 IST" name="login" finished-at="2025-09-18T17:34:37 IST" duration-ms="2721" status="PASS">
+        </test-method> <!-- dbConn -->
+        <test-method is-config="true" signature="preCon()[pri:0, instance:organization.CreateOrgTest@fa4c865]" started-at="2025-09-19T17:33:51 IST" name="preCon" finished-at="2025-09-19T17:33:51 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preCon -->
+        <test-method is-config="true" signature="openBro()[pri:0, instance:organization.CreateOrgTest@fa4c865]" started-at="2025-09-19T17:33:51 IST" name="openBro" finished-at="2025-09-19T17:33:54 IST" duration-ms="2654" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBro -->
+        <test-method is-config="true" signature="login()[pri:0, instance:organization.CreateOrgTest@fa4c865]" started-at="2025-09-19T17:33:54 IST" name="login" finished-at="2025-09-19T17:34:01 IST" duration-ms="6987" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="repBackup()[pri:0, instance:avance_reports.Facebook@fbd1f6]" started-at="2025-09-18T17:34:37 IST" name="repBackup" finished-at="2025-09-18T17:34:37 IST" duration-ms="262" status="PASS">
+        <test-method signature="createOrgTest()[pri:0, instance:organization.CreateOrgTest@fa4c865]" started-at="2025-09-19T17:34:01 IST" name="createOrgTest" finished-at="2025-09-19T17:34:58 IST" duration-ms="56683" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [DSG_5823123] but found [DSG_5823]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [DSG_5823123] but found [DSG_5823]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at organization.CreateOrgTest.createOrgTest(CreateOrgTest.java:35)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- repBackup -->
-      </class> <!-- avance_reports.Facebook -->
+        </test-method> <!-- createOrgTest -->
+        <test-method is-config="true" signature="logOut()[pri:0, instance:organization.CreateOrgTest@fa4c865]" started-at="2025-09-19T17:34:58 IST" name="logOut" finished-at="2025-09-19T17:35:01 IST" duration-ms="3759" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOut -->
+        <test-method is-config="true" signature="closeBro()[pri:0, instance:organization.CreateOrgTest@fa4c865]" started-at="2025-09-19T17:35:01 IST" name="closeBro" finished-at="2025-09-19T17:35:05 IST" duration-ms="3376" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBro -->
+        <test-method is-config="true" signature="postCon()[pri:0, instance:organization.CreateOrgTest@fa4c865]" started-at="2025-09-19T17:35:05 IST" name="postCon" finished-at="2025-09-19T17:35:05 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCon -->
+        <test-method is-config="true" signature="dbClose()[pri:0, instance:organization.CreateOrgTest@fa4c865]" started-at="2025-09-19T17:35:05 IST" name="dbClose" finished-at="2025-09-19T17:35:05 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dbClose -->
+      </class> <!-- organization.CreateOrgTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
