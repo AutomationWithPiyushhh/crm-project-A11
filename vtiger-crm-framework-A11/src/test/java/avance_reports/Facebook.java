@@ -22,7 +22,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class Facebook {
-	ExtentReports report;
+ExtentReports report;
 	
 	@BeforeSuite
 	public void repConfig() {
