@@ -33,7 +33,7 @@ public class BrokenLinks {
 			http.connect();
 
 			if (http.getResponseCode() < 300) {
-
+				System.out.println("this links are not broken....");
 			}
 		} catch (Exception e) {
 			System.out.println(url + " is broken");
