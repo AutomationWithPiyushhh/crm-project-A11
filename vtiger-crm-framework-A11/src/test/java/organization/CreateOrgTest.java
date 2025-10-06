@@ -19,7 +19,7 @@ public class CreateOrgTest extends BaseClass{
 	@Test
 	public void createOrgTest() throws IOException, InterruptedException {
 		FileUtility fUtil = new FileUtility();
-		String orgName = fUtil.getStringDataFromExcelFile("Org", 1, 0) + (int) (Math.random() * 9999);
+		String orgName = fUtil.getStringDataFromExcelFile("Org", 3, 0) + (int) (Math.random() * 9999);
 
 		HomePage hp = new HomePage(driver);
 		hp.getOrgLink().click();
